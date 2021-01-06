@@ -12,4 +12,4 @@ commit di laptop harold
 COPY TUTORIAL MANA INI?
 
 Rei-testNewBranch
-harold-testNewBranch
+harold-testNewBranch so di master
