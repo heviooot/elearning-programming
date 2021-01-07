@@ -3,22 +3,21 @@ import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); //state untuk mengetahui dropdown lagi kebuka atau nggak
 
-  const toggle = () => {
+  const toggle = () => { //function untuk mengubah isOpen menjadi true atau sebaliknya
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    const hideMenu = () => {
+  useEffect(() => { // hooks untuk menjalankan command tertentu pada waktu komponen di render
+    const hideMenu = () => { //function untuk menyembunyikan dropdown kalo width diatas 768px(medium pada tailwindcss)
       if (window.innerWidth > 768 && isOpen) {
         setIsOpen(false);
       }
     };
-    window.addEventListener("resize", hideMenu);
-
+    window.addEventListener("resize", hideMenu); // menambahkan eventListener untuk mengetahui apabila ukuran window terubah
     return () => {
-      window.removeEventListener("resize", hideMenu);
+      window.removeEventListener("resize", hideMenu); // menghilangkan eventListener ketika komponen tidak di render
     };
   });
   return (
@@ -30,7 +29,8 @@ const Navbar = () => {
         <Link to="/" className="pl-8 font-mono text-4xl">
           dingoding.
         </Link>
-        <div className="px-4 mr-10 cursor-pointer md:hidden" onClick={toggle}>
+        {/* onClick={toggle} artinya jalankan function "toggle" ketika gambar ini ditekan */}
+        <div className="px-4 mr-10 cursor-pointer md:hidden" onClick={toggle}> 
           <svg
             className="w-6 h-6"
             fill="none"
@@ -73,7 +73,8 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
-      <Dropdown isOpen={isOpen} toggle={toggle} />
+      {/* mengoper state dari isOpen dan function "toggle" ke komponen dropdown */}
+      <Dropdown isOpen={isOpen} toggle={toggle} /> 
     </>
   );
 };

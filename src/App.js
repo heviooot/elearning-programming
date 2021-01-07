@@ -1,18 +1,12 @@
-
-import Navbar from './components/Navbar';
-import React, {useState, useEffect} from 'react';
-import About from './components/About';
-
+import Navbar from "./components/navbar/Navbar";
+import React from "react";
 
 const App = () => {
-
-  
-
   return (
     <>
       <Navbar />
     </>
   );
-}
+};
 
 export default App;
