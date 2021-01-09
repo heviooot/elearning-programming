@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Dropdown from "./Dropdown";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); //state untuk mengetahui dropdown lagi kebuka atau nggak
@@ -18,7 +17,6 @@ const Navbar = () => {
         setIsOpen(false);
       }
     };
-    console.log(isOpen);
     window.addEventListener("resize", hideMenu); // menambahkan eventListener untuk mengetahui apabila ukuran window terubah
     return () => {
       window.removeEventListener("resize", hideMenu); // menghilangkan eventListener ketika komponen tidak di render
@@ -34,7 +32,7 @@ const Navbar = () => {
           dingoding.
         </Link>
         {/* onClick={toggle} artinya jalankan function "toggle" ketika gambar ini ditekan */}
-        <div className="px-4 mr-10 cursor-pointer md:hidden" onClick={toggle}>
+        <div className="px-4 mr-2 cursor-pointer md:hidden" onClick={toggle}>
           {isOpen ? (
             <svg
               className="w-6 h-6"
@@ -94,8 +92,27 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
-      {/* mengoper state dari isOpen dan function "toggle" ke komponen dropdown */}
-      <Dropdown isOpen={isOpen} toggle={toggle} />
+      {/* Menampilkan menu dropdown ketika window sedang pada tampilan smartphone */}
+      <div
+        className={
+          isOpen
+            ? "grid grid-rows-4 right-2 top-16 mt-2 fixed overflow-hidden text-center justify-center items-center bg-white rounded shadow-md"
+            : "hidden"
+        }
+      >
+        <Link className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white">
+          Tentang Kami
+        </Link>
+        <Link className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white">
+          Contoh Materi
+        </Link>
+        <Link className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white">
+          Kontak Kami
+        </Link>
+        <Link className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark">
+          Materi
+        </Link>
+      </div>
     </>
   );
 };
