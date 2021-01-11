@@ -6,7 +6,7 @@ import secondAboutImage from "./../../images/about2-img.png";
 const About = () => {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center bg-lessdark">
         <div className="container bg-lessdark flex flex-col-reverse justify-center items-center md:flex-row-reverse md:py-10 md:justify-center gap-8">
           <div className="font-roboto text-white w-full p-5 flex flex-col gap-8 md:w-96">
             <h1 className="text-5xl text-center font-bold md:text-left">
@@ -25,7 +25,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center bg-lessdark">
         <div className="container bg-lessdark flex flex-col-reverse justify-center items-center md:flex-row md:justify-center gap-8">
           <div className="font-roboto text-white w-full p-5 flex flex-col gap-8 md:w-96">
             <h1 className="text-5xl text-center font-bold md:text-left">

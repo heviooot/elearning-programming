@@ -68,25 +68,25 @@ const Navbar = () => {
           </div>
           <div className="pr-8 md:block hidden">
             <Link
-              className="px-4 py-3 rounded transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              className="px-4 py-3 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
               to="/"
             >
               Tentang Kami
             </Link>
             <Link
-              className="px-4 py-3 rounded transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              className="px-4 py-3 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
               to="/"
             >
               Contoh Materi
             </Link>
             <Link
-              className="px-4 py-3 rounded transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              className="px-4 py-3 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
               to="/"
             >
               Kontak Kami
             </Link>
             <Link
-              className="relative text-white bg-orange mx-5 py-3 px-4 rounded shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
+              className="relative text-white bg-orange mx-5 py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
               to="/"
             >
               Materi

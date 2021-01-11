@@ -6,22 +6,22 @@ const Landing = () => {
   return (
     <div className="flex justify-center">
       <div className="container flex flex-col-reverse justify-center items-center  gap-8 md:flex-row md:h-screen md:justify-center md:gap-0">
-        <div className="w-full p-5 flex flex-col gap-8 md:w-96">
-          <h1 className="text-5xl text-center font-mono md:text-center">
+        <div className="w-full p-5 flex flex-col gap-6 md:w-96">
+          <h1 className="text-5xl text-center font-mono md:text-left">
             dingoding.
           </h1>
-          <p className="font-roboto text-center md:text-center">
+          <p className="font-roboto text-center md:text-left">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
             eum nulla debitis, a voluptatem veniam nobis excepturi dolore?
             Repellat, et.
           </p>
           <Link
-            className="text-center text-white bg-orange py-3 px-4 rounded shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
+            className="text-center text-white bg-orange py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark md:w-36"
             to="/"
           >
-            Materi
+            Pergi ke Materi
           </Link>
-          <p className="font-roboto text-center">
+          <p className="font-roboto text-center md:text-left">
             Atau telusuri lebih lanjut<br/>&darr;
           </p>
         </div>
