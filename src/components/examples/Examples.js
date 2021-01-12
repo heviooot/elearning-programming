@@ -1,5 +1,6 @@
 import React from "react";
 import ExampleCard from "./examplecard/ExampleCard";
+import wave from "./../../images/wave.png";
 
 const Examples = () => {
   const exampleLessons = [
@@ -44,21 +45,32 @@ const Examples = () => {
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, vel.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, vel.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, vel.",
       link: "Lihat Materi",
-    }
+    },
   ];
 
   return (
+    <>
     <div className="font-roboto flex justify-center items-center">
-      <div className="container min-h-screen flex flex-col items-center">
-        <h1 className="mt-24 px-10 text-5xl font-bold text-center">Kita Akan Membahas</h1>
+      <div className="container flex flex-col items-center">
+        <h1 className="mt-24 px-10 text-5xl font-bold text-center leading-relaxed">
+          Kita Akan Membahas
+        </h1>
         <div className="mt-10 w-full grid grid-cols-1 gap-4 p-4 place-items-center gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {exampleLessons.map((lesson) => (
-              <ExampleCard title={lesson.title} description={lesson.description} link={lesson.link}/>
+            <ExampleCard
+              title={lesson.title}
+              description={lesson.description}
+              link={lesson.link}
+            />
           ))}
         </div>
-        <h1 className="mt-10 px-10 text-4xl font-bold text-center md:text-5xl">Dan Masih Banyak Lagi ! 🧐</h1>
+        <h1 className="mt-12 px-10 text-4xl font-bold text-center leading-relaxed md:text-5xl">
+          Dan Masih Banyak Lagi 🧐
+        </h1>
       </div>
     </div>
+    <img src={wave} alt="" className="w-screen max-h-96"/>
+    </>
   );
 };
 

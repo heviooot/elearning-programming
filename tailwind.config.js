@@ -7,7 +7,7 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        orange: "#ff8800",
+        orange: "#ff6900",
         lessdark: "#3c6e71",
         reallydark: "#353535",
       },

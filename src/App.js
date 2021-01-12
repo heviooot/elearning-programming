@@ -3,6 +3,7 @@ import React from "react";
 import Landing from "./components/landing/Landing";
 import About from "./components/about/About";
 import Examples from "./components/examples/Examples";
+import Contacts from "./components/contacts/Contacts";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Landing />
       <About />
       <Examples />
+      <Contacts />
     </>
   );
 };
