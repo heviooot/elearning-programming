@@ -66,24 +66,24 @@ const Navbar = () => {
               </svg>
             )}
           </div>
-          <div className="pr-8 md:block hidden">
+          <div className="pr-4 hidden md:block">
             <Link
-              className="px-4 py-3 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              className="px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
               to="/"
             >
-              Tentang Kami
+              Tentang
             </Link>
             <Link
-              className="px-4 py-3 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              className="px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
               to="/"
             >
               Contoh Materi
             </Link>
             <Link
-              className="px-4 py-3 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              className="px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
               to="/"
             >
-              Kontak Kami
+              Kontak
             </Link>
             <Link
               className="relative text-white bg-orange mx-5 py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
