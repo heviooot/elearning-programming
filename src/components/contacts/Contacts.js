@@ -45,7 +45,7 @@ const Contacts = () => {
   return (
     <div className="font-roboto bg-orange flex justify-center items-center">
       <div className="container min-h-screen flex flex-col items-center rounded-xl">
-        <h1 className="text-7xl font-bold text-white mt-10">Kenalan Yuk !</h1>
+        <h1 className="text-7xl font-bold text-white mt-10 text-center">Kenalan Yuk !</h1>
         <div className="w-full flex flex-wrap justify-evenly gap-10 mt-12 p-10">
           {team.map((member) => (
             <ContactCard
