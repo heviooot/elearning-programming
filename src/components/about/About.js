@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import firstAboutImage from "./../../images/about-img.png";
-import secondAboutImage from "./../../images/about2-img.png";
+import firstAboutImage from "./../../images/about.svg";
+import secondAboutImage from "./../../images/about2.svg";
 
 const About = () => {
   return (
@@ -21,7 +20,7 @@ const About = () => {
           <img
             src={firstAboutImage}
             alt="Landing"
-            className="w-96 h-auto mt-16 md:mt-0 md:w-1/3"
+            className="w-full h-auto mt-16 md:mt-0 md:w-1/2"
           />
         </div>
       </div>

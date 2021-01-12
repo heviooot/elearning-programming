@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="fixed flex justify-center h-16 bg-white w-screen shadow-md font-roboto"
+        className="fixed flex justify-center h-16 bg-white w-screen shadow-md font-roboto z-10"
         role="navigation"
       >
         <div className="container flex justify-between items-center">
