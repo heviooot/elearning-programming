@@ -1,6 +1,5 @@
 import React from "react";
 import ExampleCard from "./examplecard/ExampleCard";
-import wave from "./../../images/wave.png";
 
 const Examples = () => {
   const exampleLessons = [
@@ -64,12 +63,12 @@ const Examples = () => {
             />
           ))}
         </div>
-        <h1 className="mt-12 px-10 text-4xl font-bold text-center leading-relaxed md:text-5xl">
+        <h1 className="mt-12 mb-12 px-10 text-4xl font-bold text-center leading-relaxed md:text-5xl">
           Dan Masih Banyak Lagi 🧐
         </h1>
       </div>
     </div>
-    <img src={wave} alt="" className="w-screen max-h-96"/>
+    
     </>
   );
 };
