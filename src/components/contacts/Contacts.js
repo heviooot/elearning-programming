@@ -1,7 +1,7 @@
 import React from "react";
 import cat from "./../../images/cat.png";
 import ContactCard from "./contactcard/ContactCard";
-import wave from "./../../images/wave.png";
+import wave from "./../../images/waveorange.png";
 
 const Contacts = () => {
   const team = [
@@ -39,7 +39,7 @@ const Contacts = () => {
           <h1 className="px-10 text-7xl md:text-7xl font-bold text-white mt-10 text-center">
             Kenalan Yuk !
           </h1>
-          <div className="w-full flex flex-wrap justify-evenly gap-10 mt-12 p-10">
+          <div className="w-full flex flex-wrap justify-evenly gap-10 mt-5 px-0 py-10 md:mt-10 md:px-10">
             {team.map((member) => (
               <ContactCard
                 img={member.img}

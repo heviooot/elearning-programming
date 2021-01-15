@@ -1,10 +1,18 @@
 import React from "react";
 import firstAboutImage from "./../../images/about.svg";
 import secondAboutImage from "./../../images/about2.svg";
+import wave from "./../../images/wavegray.png";
 
 const About = () => {
   return (
     <>
+      <div className="relative transform scale-y-105">
+        <img
+          src={wave}
+          alt=""
+          className=" w-screen h-auto max-h-96 p-0 m-0 box-border"
+        />
+      </div>
       <div className="flex justify-center bg-lessdark">
         <div className="container bg-lessdark flex flex-col-reverse justify-center items-center md:flex-row-reverse md:py-10 md:justify-center gap-8">
           <div className="font-roboto text-white w-full p-5 flex flex-col gap-8 md:w-96">

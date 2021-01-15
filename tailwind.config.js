@@ -11,6 +11,9 @@ module.exports = {
         lessdark: "#3c6e71",
         reallydark: "#353535",
       },
+      minHeight: {
+        "96" : "24rem"
+      }
     },
   },
   variants: {

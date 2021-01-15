@@ -8,12 +8,12 @@ const Footer = () => {
         <img
           src={wave}
           alt=""
-          className=" w-screen h-auto max-h-96 p-0 m-0 box-border"
+          className=" w-screen h-auto max-h-96 p-0 m-0 box-border transform scale-y-105"
         />
       </div>
       <div className="text-white bg-lessdark flex justify-center">
         <div className="container flex flex-col px-10 lg:px-24 py-2">
-          <h1 className="text-5xl font-mono text-white p-5 text-center md:text-left">
+          <h1 className="mt-5 text-4xl py-5 font-mono text-white md:py-10 md:p-5 text-center md:text-left md:text-5xl">
             dingoding.
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
@@ -27,8 +27,8 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-5 p-5 items-center md:items-start">
               <h1 className="font-semibold">TIM</h1>
-              <h1>Tentang Kami</h1>
-              <h1>Kontak Kami</h1>
+              <h1 className="text-center md:text-left">Tentang Kami</h1>
+              <h1 className="text-center md:text-left">Kontak Kami</h1>
             </div>
             <div className="flex flex-col lg:col-span-2 gap-5 p-5 items-center md:items-end">
               <h1 className="font-semibold">MEDIA</h1>

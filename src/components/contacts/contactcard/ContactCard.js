@@ -5,14 +5,14 @@ const ContactCard = ({ name, img, desc, contacts }) => {
     console.log(contacts.github);
   }
   return (
-    <div className="font-roboto w-96 bg-white flex flex-col gap-5 items-center py-5 px-5 rounded-2xl shadow-lg">
+    <div className="font-roboto w-72 md:w-96 bg-white flex flex-col gap-5 items-center py-5 px-5 rounded-2xl shadow-lg">
       <img
         src={img}
         alt=""
-        className="relative w-48 object-cover h-auto rounded-full"
+        className="relative w-36 md:w-48 object-cover h-auto rounded-full"
       />
-      <h1 className="text-3xl text-center font-medium">{name}</h1>
-      <p className="text-center px-5">{desc}</p>
+      <h1 className="text-xl md:text-3xl font-semibold text-center font-medium">{name}</h1>
+      <p className="texl-lg md:text-xl text-center px-5">{desc}</p>
       <div className="flex justify-center gap-4">
         <a
           href="https://google.com"
