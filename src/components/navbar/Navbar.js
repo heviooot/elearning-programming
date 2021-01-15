@@ -99,7 +99,7 @@ const Navbar = () => {
       <div
         className={
           isOpen
-            ? "grid grid-rows-4 right-2 top-16 mt-2 fixed overflow-hidden text-center justify-center items-center bg-white rounded shadow-md"
+            ? "grid grid-rows-4 right-2 top-16 mt-2 fixed overflow-hidden text-center justify-center items-center bg-white rounded shadow-md z-10"
             : "hidden"
         }
       >
