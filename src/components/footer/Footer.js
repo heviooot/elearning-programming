@@ -8,7 +8,7 @@ const Footer = () => {
         <img
           src={wave}
           alt=""
-          className=" w-screen h-auto max-h-96 p-0 m-0 box-border transform scale-y-105"
+          className=" w-screen h-auto max-h-72 p-0 m-0 box-border transform scale-y-105"
         />
       </div>
       <div className="text-white bg-lessdark flex justify-center">

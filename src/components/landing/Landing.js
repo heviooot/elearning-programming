@@ -10,10 +10,8 @@ const Landing = () => {
           <h1 className="text-5xl text-center font-mono md:text-left">
             dingoding.
           </h1>
-          <p className="font-roboto text-center md:text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            eum nulla debitis, a voluptatem veniam nobis excepturi dolore?
-            Repellat, et.
+          <p className="font-roboto text-justify md:text-left">
+            Sebelum kamu terjun lebih dalam ke dunia ngoding, yuk sini kita ajarin dasar-dasar pemrograman supaya kamu bisa ngoding dengan lancar ! 😃
           </p>
           <Link
             className="text-center text-white bg-orange py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark md:w-36"
@@ -22,7 +20,9 @@ const Landing = () => {
             Pergi ke Materi
           </Link>
           <p className="font-roboto text-center md:text-left">
-            Atau telusuri lebih lanjut<br/>&darr;
+            Masih penasaran? Scroll ke bawah
+            <br />
+            &darr;
           </p>
         </div>
         <img

@@ -10,7 +10,7 @@ const About = () => {
         <img
           src={wave}
           alt=""
-          className=" w-screen h-auto max-h-96 p-0 m-0 box-border"
+          className=" w-screen h-auto max-h-72 p-0 m-0 box-border"
         />
       </div>
       <div className="flex justify-center bg-lessdark">
@@ -19,10 +19,15 @@ const About = () => {
             <h1 className="text-5xl text-center font-bold md:text-left">
               Tentang Kami.
             </h1>
-            <p className="text-center md:text-left">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consectetur eum nulla debitis, a voluptatem veniam nobis excepturi
-              dolore? Repellat, et.
+            <p className="text-justify md:text-left">
+              <span className="font-mono">dingoding.</span> adalah aplikasi{" "}
+              <em>e-Learning</em> yang bertujuan untuk memperkenalkan masyarakat
+              Indonesia ke dunia pemrograman.
+            </p>
+            <p className="text-justify md:text-left">
+              Disini, kita akan menggunakan bahasa C untuk membahas dasar-dasar pemrograman dalam bahasa
+              Indonesia agar lebih mudah dimengerti dan dicerna oleh
+              masyarakat Indonesia.
             </p>
           </div>
           <img
