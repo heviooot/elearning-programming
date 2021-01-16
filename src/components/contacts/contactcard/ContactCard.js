@@ -12,7 +12,7 @@ const ContactCard = ({ name, img, desc, contacts }) => {
         className="relative w-36 md:w-48 object-cover h-auto rounded-full"
       />
       <h1 className="text-xl md:text-3xl font-semibold text-center font-medium">{name}</h1>
-      <p className="texl-md md:text-lg text-center px-5">{desc}</p>
+      <p className="text-md md:text-md text-center px-5">{desc}</p>
       <div className="flex justify-center gap-4">
         <a
           href="https://google.com"
