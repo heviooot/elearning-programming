@@ -1,5 +1,5 @@
 import React from "react";
-import wave from "./../../images/wavegray.png";
+import wave from "./../../images/separators/separatorgray.svg";
 
 const Footer = () => {
   return (

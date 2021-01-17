@@ -1,6 +1,6 @@
 import React from "react";
 import ExampleCard from "./examplecard/ExampleCard";
-import wave from "./../../images/wavewhite.png";
+import wave from "./../../images/separators/separatorwhite.svg";
 
 const Examples = () => {
   const exampleLessons = [

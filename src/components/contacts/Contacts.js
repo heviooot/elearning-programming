@@ -1,7 +1,7 @@
 import React from "react";
 import cat from "./../../images/cat.png";
 import ContactCard from "./contactcard/ContactCard";
-import wave from "./../../images/waveorange.png";
+import wave from "./../../images/separators/separatororange.svg";
 
 const Contacts = () => {
   const team = [

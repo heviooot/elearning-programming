@@ -1,7 +1,7 @@
 import React from "react";
 import firstAboutImage from "./../../images/about.svg";
 import secondAboutImage from "./../../images/about2.svg";
-import wave from "./../../images/wavegray.png";
+import wave from "./../../images/separators/separatorgray.svg";
 
 const About = () => {
   return (
