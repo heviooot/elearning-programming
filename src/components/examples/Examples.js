@@ -57,7 +57,7 @@ const Examples = () => {
           className=" w-screen h-auto max-h-72 p-0 m-0 bg-transparent box-border transform scale-y-110"
         />
       </div>
-      <div className="font-roboto flex justify-center items-center">
+      <div id="examples" className="font-roboto flex justify-center items-center">
         <div className="container flex flex-col items-center">
           <h1 className="mt-24 px-10 text-5xl font-bold text-center leading-relaxed">
             Kita Akan Membahas

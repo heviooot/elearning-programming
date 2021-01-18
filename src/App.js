@@ -7,6 +7,8 @@ import Contacts from "./components/contacts/Contacts";
 import Footer from "./components/footer/Footer";
 
 const App = () => {
+  
+
   return (
     <div className="font-roboto">
       <Navbar />

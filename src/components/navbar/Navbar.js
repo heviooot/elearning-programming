@@ -9,6 +9,24 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToAbout = () => {
+    const about = document.getElementById("about");
+    window.scrollTo({ top: about.offsetTop-75, behavior: "smooth" });
+  };
+
+  const scrollToExamples = () => {
+    const example = document.getElementById("examples");
+    window.scrollTo({ top: example.offsetTop, behavior: "smooth" });
+  };
+  const scrollToContacts = () => {
+    const contacts = document.getElementById("contacts");
+    window.scrollTo({ top: contacts.offsetTop-75, behavior: "smooth" });
+  };
+
   useEffect(() => {
     // hooks untuk menjalankan command tertentu pada waktu komponen di render
     const hideMenu = () => {
@@ -22,6 +40,7 @@ const Navbar = () => {
       window.removeEventListener("resize", hideMenu); // menghilangkan eventListener ketika komponen tidak di render
     };
   });
+
   return (
     <>
       <nav
@@ -29,9 +48,12 @@ const Navbar = () => {
         role="navigation"
       >
         <div className="container flex justify-between items-center">
-          <Link to="/" className="pl-8 font-mono text-4xl">
+          <div
+            className="pl-8 font-mono text-4xl cursor-pointer"
+            onClick={scrollToTop}
+          >
             dingoding.
-          </Link>
+          </div>
           {/* onClick={toggle} artinya jalankan function "toggle" ketika gambar ini ditekan */}
           <div className="px-4 mr-2 cursor-pointer md:hidden" onClick={toggle}>
             {isOpen ? (
@@ -67,24 +89,24 @@ const Navbar = () => {
             )}
           </div>
           <div className="pr-4 hidden md:block">
-            <Link
-              className="px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
-              to="/"
+            <div
+              className="cursor-pointer inline-block px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              onClick={scrollToAbout}
             >
               Tentang
-            </Link>
-            <Link
-              className="px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
-              to="/"
+            </div>
+            <div
+              className="cursor-pointer inline-block px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              onClick={scrollToExamples}
             >
               Contoh Materi
-            </Link>
-            <Link
-              className="px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
-              to="/"
+            </div>
+            <div
+              className="cursor-pointer inline-block px-4 py-3 mx-2 rounded-xl transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+              onClick={scrollToContacts}
             >
               Kontak
-            </Link>
+            </div>
             <Link
               className="relative text-white bg-orange mx-5 py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
               to="/"
@@ -103,15 +125,22 @@ const Navbar = () => {
             : "hidden"
         }
       >
-        <Link className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white">
+        <div
+          className="cursor-pointer p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+          onClick={scrollToAbout}
+        >
           Tentang Kami
-        </Link>
-        <Link className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white">
+        </div>
+        <div className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+          onClick={scrollToExamples}
+        >
           Contoh Materi
-        </Link>
-        <Link className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white">
+        </div>
+        <div className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+          onClick={scrollToContacts}
+        >
           Kontak Kami
-        </Link>
+        </div>
         <Link className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark">
           Materi
         </Link>

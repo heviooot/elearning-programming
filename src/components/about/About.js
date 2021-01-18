@@ -13,7 +13,7 @@ const About = () => {
           className=" w-screen h-auto max-h-72 p-0 m-0 box-border"
         />
       </div>
-      <div className="flex justify-center bg-lessdark">
+      <div id="about" className="flex justify-center bg-lessdark">
         <div className="container bg-lessdark flex flex-col-reverse justify-center items-center lg:flex-row-reverse lg:py-10 lg:justify-center gap-8">
           <div className="font-roboto text-white w-full p-5 flex flex-col gap-8 lg:w-96">
             <h1 className="text-5xl text-center font-bold lg:text-left">

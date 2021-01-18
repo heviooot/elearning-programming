@@ -34,7 +34,7 @@ const Contacts = () => {
   return (
     <>
       <img src={wave} alt="" className="w-screen max-h-72 relative top-1" />
-      <div className="font-roboto bg-orange flex justify-center items-center">
+      <div id="contacts" className="font-roboto bg-orange flex justify-center items-center">
         <div className="container flex flex-col items-center rounded-xl">
           <h1 className="px-10 text-7xl md:text-7xl font-bold text-white mt-10 text-center">
             Kenalan Yuk !
