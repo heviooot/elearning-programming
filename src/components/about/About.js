@@ -1,6 +1,6 @@
 import React from "react";
-import firstAboutImage from "./../../images/about.svg";
-import secondAboutImage from "./../../images/about2.svg";
+import firstAboutImage from "./../../images/landingPage/about.svg";
+import secondAboutImage from "./../../images/landingPage/about2.svg";
 import wave from "./../../images/separators/separatorgray.svg";
 
 const About = () => {

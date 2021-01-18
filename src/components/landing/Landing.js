@@ -1,5 +1,5 @@
 import React from "react";
-import landingImg from "./../../images/landing.svg";
+import landingImg from "./../../images/landingPage/landing.svg";
 import { Link } from "react-router-dom";
 
 const Landing = () => {
