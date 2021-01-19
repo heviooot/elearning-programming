@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import firstAboutImage from "./../../images/landingPage/about.svg";
 import secondAboutImage from "./../../images/landingPage/about2.svg";
 import wave from "./../../images/separators/separatorgray.svg";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const leftItemsVariants = {
@@ -41,18 +41,20 @@ const rightItemsVariants = {
 };
 
 const About = () => {
-  const firstRefAnimation = useAnimation();
-  const secondRefAnimation = useAnimation();
-  const [firstRef, firstRefInView] = useInView();
-  const [secondRef, secondRefInView] = useInView();
+  const [firstRef, firstRefInView] = useInView({ threshold: 0.2 });
+  const [secondRef, secondRefInView] = useInView({ threshold: 0.2 });
+  const [firstRefVisible, setFirstRefVisible] = useState(false);
+  const [secondRefVisible, setSecondRefVisible] = useState(false);
+
   useEffect(() => {
     if (firstRefInView) {
-      firstRefAnimation.start("visible");
+      setFirstRefVisible(true);
     }
     if (secondRefInView) {
-      secondRefAnimation.start("visible");
+      setSecondRefVisible(true);
     }
-  }, [firstRefAnimation, secondRefAnimation, firstRefInView, secondRefInView]);
+  }, [firstRefInView, secondRefInView]);
+
   return (
     <>
       <div className="overflow-hidden relative transform scale-y-105">
@@ -67,7 +69,7 @@ const About = () => {
           <motion.div
             className="font-roboto text-white w-full p-5 flex flex-col gap-8 lg:w-96"
             ref={firstRef}
-            animate={firstRefAnimation}
+            animate={firstRefVisible ? "visible" : ""}
             initial="hidden"
             variants={rightItemsVariants}
           >
@@ -90,7 +92,7 @@ const About = () => {
             alt="Landing"
             className="w-full h-auto mt-16 lg:mt-0 lg:w-1/2"
             ref={firstRef}
-            animate={firstRefAnimation}
+            animate={firstRefVisible ? "visible" : ""}
             initial="hidden"
             variants={leftItemsVariants}
           />
@@ -101,7 +103,7 @@ const About = () => {
           <motion.div
             className="font-roboto text-white w-full p-5 flex flex-col gap-8 lg:w-96"
             ref={secondRef}
-            animate={secondRefAnimation}
+            animate={secondRefVisible ? "visible" : ""}
             initial="hidden"
             variants={leftItemsVariants}
           >
@@ -119,7 +121,7 @@ const About = () => {
             alt="Landing"
             className="w-96 h-auto mt-16 lg:mt-0 lg:w-1/3"
             ref={secondRef}
-            animate={secondRefAnimation}
+            animate={secondRefVisible ? "visible" : ""}
             initial="hidden"
             variants={rightItemsVariants}
           />
