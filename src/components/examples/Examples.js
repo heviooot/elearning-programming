@@ -65,6 +65,7 @@ const Examples = () => {
           <div className="mt-10 w-full grid grid-cols-1 gap-4 p-4 place-items-center gap-y-10 md:grid-cols-2 lg:grid-cols-3">
             {exampleLessons.map((lesson) => (
               <ExampleCard
+                key={lesson.id}
                 title={lesson.title}
                 description={lesson.description}
                 link={lesson.link}

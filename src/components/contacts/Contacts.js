@@ -14,7 +14,7 @@ const Contacts = () => {
       contacts: {
         github: "reigithub",
         linkedIn: "reilinkedin",
-        discord: "reidiscord",
+        google: "reigoogle",
       },
     },
     {
@@ -26,7 +26,7 @@ const Contacts = () => {
       contacts: {
         github: "haroldgithub",
         linkedIn: "haroldlinkedin",
-        discord: "harolddiscord",
+        google: "haroldgoogle",
       },
     },
   ];
@@ -42,6 +42,7 @@ const Contacts = () => {
           <div className="w-full flex flex-wrap justify-evenly gap-10 mt-5 px-0 py-10 md:mt-10 md:px-10">
             {team.map((member) => (
               <ContactCard
+                key={member.id}
                 img={member.img}
                 name={member.name}
                 desc={member.desc}
