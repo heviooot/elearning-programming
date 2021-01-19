@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import landingImg from "./../../images/landingPage/landing.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,16 +7,19 @@ import SquareLoader from "react-spinners/SquareLoader";
 const Landing = () => {
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    setLoading(true);
+  }, []);
+
   const landingDescriptionAnim = {
     hidden: {
-      y: "100vh",
+      x: -50,
       opacity: 0,
     },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
-        duration: 1.5,
         ease: "easeInOut",
       },
     },
@@ -24,14 +27,13 @@ const Landing = () => {
 
   const landingImageAnim = {
     hidden: {
-      y: "-100vh",
+      x: 50,
       opacity: 0,
     },
     visible: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
-        duration: 1.5,
         ease: "easeInOut",
       },
     },
@@ -76,7 +78,7 @@ const Landing = () => {
           variants={landingImageAnim}
           initial="hidden"
           animate="visible"
-          onLoad={() => setLoading(!loading)}
+          onLoad={() => setLoading(false)}
         />
       </div>
     </div>
