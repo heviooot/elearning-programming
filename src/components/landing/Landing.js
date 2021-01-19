@@ -1,17 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import landingImg from "./../../images/landingPage/landing.svg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import SquareLoader from "react-spinners/SquareLoader";
 
 const Landing = () => {
+  const [loading, setLoading] = useState(true);
+
+  const landingDescriptionAnim = {
+    hidden: {
+      y: "100vh",
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const landingImageAnim = {
+    hidden: {
+      y: "-100vh",
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <div className="flex justify-center">
       <div className="container flex flex-col-reverse justify-center items-center  gap-8 lg:flex-row lg:h-screen lg:justify-center lg:gap-0">
-        <div className="w-full p-5 flex flex-col gap-6 lg:w-96">
+        <motion.div
+          className={
+            loading ? "hidden" : "w-full p-5 flex flex-col gap-6 lg:w-96"
+          }
+          variants={landingDescriptionAnim}
+          initial="hidden"
+          animate="visible"
+        >
           <h1 className="text-5xl text-center font-mono lg:text-left">
             dingoding.
           </h1>
           <p className="font-roboto text-justify lg:text-left">
-            Sebelum kamu terjun lebih dalam ke dunia ngoding, yuk sini kita ajarin dasar-dasar pemrograman supaya kamu bisa ngoding dengan lancar ! 😃
+            Sebelum kamu terjun lebih dalam ke dunia ngoding, yuk sini kita
+            ajarin dasar-dasar pemrograman supaya kamu bisa ngoding dengan
+            lancar ! 😃
           </p>
           <Link
             className="text-center text-white bg-orange py-3 px-4 rounded-xl shadow-lg transition duration-200 ease-in-out hover:bg-lessdark lg:w-36"
@@ -24,11 +67,16 @@ const Landing = () => {
             <br />
             &darr;
           </p>
-        </div>
-        <img
+        </motion.div>
+        <SquareLoader size={150} color={"#ff6900"} loading={loading} />
+        <motion.img
           src={landingImg}
           alt="Landing"
-          className="w-96 h-auto mt-16 lg:mt-0 lg:w-1/3"
+          className={loading ? "hidden" : "w-96 h-auto mt-16 lg:mt-0 lg:w-1/3"}
+          variants={landingImageAnim}
+          initial="hidden"
+          animate="visible"
+          onLoad={() => setLoading(!loading)}
         />
       </div>
     </div>
