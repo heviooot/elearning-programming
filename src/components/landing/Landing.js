@@ -1,30 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import landingImg from "./../../images/landingPage/landing.svg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SquareLoader from "react-spinners/SquareLoader";
 
-const Landing = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(true);
-  }, []);
-
-  const landingDescriptionAnim = {
-    hidden: {
-      y: 200,
-      opacity: 0,
+const landingDescriptionAnim = {
+  hidden: {
+    y: 200,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
     },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-      },
-    },
-  };
+  },
+};
 
+const Landing = ({loading, setLoading}) => {
+  
 
   return (
     <div className="flex justify-center">

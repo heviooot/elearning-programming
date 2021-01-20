@@ -109,7 +109,7 @@ const Navbar = () => {
             </div>
             <Link
               className="relative text-white bg-orange mx-5 py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
-              to="/"
+              to="/lessons"
             >
               Materi
             </Link>
@@ -141,7 +141,7 @@ const Navbar = () => {
         >
           Kontak Kami
         </div>
-        <Link className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark">
+        <Link to="/lessons" className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark">
           Materi
         </Link>
       </div>

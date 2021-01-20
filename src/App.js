@@ -1,22 +1,23 @@
-import Navbar from "./components/navbar/Navbar";
 import React from "react";
-import Landing from "./components/landing/Landing";
-import About from "./components/about/About";
-import Examples from "./components/examples/Examples";
-import Contacts from "./components/contacts/Contacts";
-import Footer from "./components/footer/Footer";
+import { Switch, Route } from "react-router-dom";
+import Lessons from "./pages/Lessons";
+import Home from "./pages/Home";
 
 const App = () => {
-  
-
   return (
     <div className="font-roboto">
-      <Navbar />
-      <Landing />
-      <About />
-      <Examples />
-      <Contacts />
-      <Footer />
+     
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+      <Switch>
+        <Route path="/lessons">
+          <Lessons />
+        </Route>
+      </Switch>
     </div>
   );
 };

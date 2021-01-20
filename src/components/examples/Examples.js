@@ -87,13 +87,17 @@ const cardVariants = {
 };
 
 const Examples = () => {
+  const [firstTextRef, firstTextRefInView] = useInView({
+    rootMargin: "0px 0px -150px 0px",
+    triggerOnce: true,
+  });
   const [ref, InView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -200px 0px",
+    rootMargin: "0px 0px -300px 0px",
   });
   const [lastTextRef, lastTextRefInView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -150px 0px",
+    rootMargin: "0px 0px -100px 0px",
   });
 
   return (
@@ -109,12 +113,16 @@ const Examples = () => {
         id="examples"
         className="font-roboto flex justify-center items-center"
       >
-        <motion.div
-          className="container flex flex-col items-center"
-        >
-          <h1 className="relative mt-24 px-10 text-5xl font-bold text-center leading-relaxed">
+        <div className="container flex flex-col items-center">
+          <motion.h1
+            className="relative mt-24 px-10 text-5xl font-bold text-center leading-relaxed"
+            ref={firstTextRef}
+            variants={textVariants}
+            initial="hidden"
+            animate={firstTextRefInView ? "visible" : ""}
+          >
             Kita Akan Membahas
-          </h1>
+          </motion.h1>
           <motion.div
             className="overflow-hidden mt-10 w-full grid grid-cols-1 gap-4 p-4 place-items-center gap-y-10 md:grid-cols-2 lg:grid-cols-3"
             ref={ref}
@@ -146,7 +154,7 @@ const Examples = () => {
           >
             Dan Masih Banyak Lagi 🧐
           </motion.h1>
-        </motion.div>
+        </div>
       </div>
     </>
   );

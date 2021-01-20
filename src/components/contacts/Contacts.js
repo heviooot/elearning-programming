@@ -67,7 +67,7 @@ const Contacts = () => {
 
   const [cardRef, cardRefInView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -200px 0px",
+    rootMargin: "0px 0px -300px 0px",
   });
 
   return (
@@ -94,9 +94,12 @@ const Contacts = () => {
             animate={cardRefInView ? "visible" : "hidden"}
           >
             {team.map((member) => (
-              <motion.div className="relative" variants={cardVariants}>
+              <motion.div
+                className="relative"
+                variants={cardVariants}
+                key={member.id}
+              >
                 <ContactCard
-                  key={member.id}
                   img={member.img}
                   name={member.name}
                   desc={member.desc}
