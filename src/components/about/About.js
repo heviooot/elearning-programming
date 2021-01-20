@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import firstAboutImage from "./../../images/landingPage/about.svg";
 import secondAboutImage from "./../../images/landingPage/about2.svg";
 import wave from "./../../images/separators/separatorgray.svg";
@@ -7,53 +7,41 @@ import { useInView } from "react-intersection-observer";
 
 const leftItemsVariants = {
   hidden: {
-    x: -250,
+    y: 200,
     opacity: 0,
     transition: {
-      duration: 1,
+      type: "spring"
     },
   },
   visible: {
-    x: 0,
+    y:0,
     opacity: 1,
     transition: {
-      duration: 1,
-      ease: "easeInOut",
+      type: "spring"
     },
   },
 };
 const rightItemsVariants = {
   hidden: {
-    x: 250,
+    y:200,
     opacity: 0,
     transition: {
-      duration: 1,
+      type: "spring"
     },
   },
   visible: {
-    x: 0,
+    y:0,
     opacity: 1,
     transition: {
-      duration: 1,
-      ease: "easeInOut",
+      type: "spring"
     },
   },
 };
 
 const About = () => {
-  const [firstRef, firstRefInView] = useInView({ threshold: 0.2 });
-  const [secondRef, secondRefInView] = useInView({ threshold: 0.2 });
-  const [firstRefVisible, setFirstRefVisible] = useState(false);
-  const [secondRefVisible, setSecondRefVisible] = useState(false);
-
-  useEffect(() => {
-    if (firstRefInView) {
-      setFirstRefVisible(true);
-    }
-    if (secondRefInView) {
-      setSecondRefVisible(true);
-    }
-  }, [firstRefInView, secondRefInView]);
+  const [firstRef, firstRefInView] = useInView({ triggerOnce: true, threshold: 0.5 });
+  const [secondRef, secondRefInView] = useInView({ triggerOnce: true, threshold: 0.5 });
+  
 
   return (
     <>
@@ -68,8 +56,7 @@ const About = () => {
         <div className="overflow-hidden container bg-lessdark flex flex-col-reverse justify-center items-center lg:flex-row-reverse lg:py-10 lg:justify-center gap-8">
           <motion.div
             className="font-roboto text-white w-full p-5 flex flex-col gap-8 lg:w-96"
-            ref={firstRef}
-            animate={firstRefVisible ? "visible" : ""}
+            animate={firstRefInView ? "visible" : ""}
             initial="hidden"
             variants={rightItemsVariants}
           >
@@ -92,7 +79,7 @@ const About = () => {
             alt="Landing"
             className="w-full h-auto mt-16 lg:mt-0 lg:w-1/2"
             ref={firstRef}
-            animate={firstRefVisible ? "visible" : ""}
+            animate={firstRefInView ? "visible" : ""}
             initial="hidden"
             variants={leftItemsVariants}
           />
@@ -102,8 +89,7 @@ const About = () => {
         <div className="overflow-hidden container bg-lessdark flex flex-col-reverse justify-center items-center lg:flex-row lg:justify-center gap-8">
           <motion.div
             className="font-roboto text-white w-full p-5 flex flex-col gap-8 lg:w-96"
-            ref={secondRef}
-            animate={secondRefVisible ? "visible" : ""}
+            animate={secondRefInView ? "visible" : ""}
             initial="hidden"
             variants={leftItemsVariants}
           >
@@ -121,7 +107,7 @@ const About = () => {
             alt="Landing"
             className="w-96 h-auto mt-16 lg:mt-0 lg:w-1/3"
             ref={secondRef}
-            animate={secondRefVisible ? "visible" : ""}
+            animate={secondRefInView ? "visible" : ""}
             initial="hidden"
             variants={rightItemsVariants}
           />
