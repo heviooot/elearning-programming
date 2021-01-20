@@ -93,7 +93,7 @@ const Examples = () => {
   });
   const [lastTextRef, lastTextRefInView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -200px 0px",
+    rootMargin: "0px 0px -150px 0px",
   });
 
   return (

@@ -39,8 +39,8 @@ const rightItemsVariants = {
 };
 
 const About = () => {
-  const [firstRef, firstRefInView] = useInView({ triggerOnce: true, threshold: 0.5 });
-  const [secondRef, secondRefInView] = useInView({ triggerOnce: true, threshold: 0.5 });
+  const [firstRef, firstRefInView] = useInView({ triggerOnce: true, rootMargin: "0px 0px -200px 0px" });
+  const [secondRef, secondRefInView] = useInView({ triggerOnce: true, rootMargin: "0px 0px -200px 0px" });
   
 
   return (

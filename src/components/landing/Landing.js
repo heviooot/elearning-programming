@@ -13,31 +13,18 @@ const Landing = () => {
 
   const landingDescriptionAnim = {
     hidden: {
-      x: -50,
+      y: 200,
       opacity: 0,
     },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
-        ease: "easeInOut",
+        type: "spring",
       },
     },
   };
 
-  const landingImageAnim = {
-    hidden: {
-      x: 50,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        ease: "easeInOut",
-      },
-    },
-  };
 
   return (
     <div className="flex justify-center">
@@ -75,7 +62,7 @@ const Landing = () => {
           src={landingImg}
           alt="Landing"
           className={loading ? "hidden" : "w-96 h-auto mt-16 lg:mt-0 lg:w-1/3"}
-          variants={landingImageAnim}
+          variants={landingDescriptionAnim}
           initial="hidden"
           animate="visible"
           onLoad={() => setLoading(false)}
