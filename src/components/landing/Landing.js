@@ -23,7 +23,7 @@ const Landing = ({loading, setLoading}) => {
 
   return (
     <div className="flex justify-center">
-      <div className="container flex flex-col-reverse justify-center items-center  gap-8 lg:flex-row min-h-screen lg:justify-center lg:gap-0">
+      <div className="container flex flex-col-reverse justify-center items-center  gap-8 lg:flex-row min-h-screen lg:justify-center lg:gap-8">
         <motion.div
           className={
             loading ? "hidden" : "w-full p-5 flex flex-col gap-6 lg:w-96"

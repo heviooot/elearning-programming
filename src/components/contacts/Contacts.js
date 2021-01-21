@@ -23,11 +23,11 @@ const containerVariants = {
 
 const cardVariants = {
   hidden: {
-    scaleY: 0,
+    scale: 0,
     opacity: 0,
   },
   visible: {
-    scaleY: 1,
+    scale: 1,
     opacity: 1,
   },
 };
