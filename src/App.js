@@ -6,17 +6,9 @@ import Home from "./pages/Home";
 const App = () => {
   return (
     <div className="font-roboto">
-     
-
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-      </Switch>
-      <Switch>
-        <Route path="/lessons">
-          <Lessons />
-        </Route>
+        <Route exact path="/" component={Home}/>
+        <Route path="/lessons" component={Lessons}/>
       </Switch>
     </div>
   );
