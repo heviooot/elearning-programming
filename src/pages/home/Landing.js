@@ -1,7 +1,7 @@
 import React from "react";
 import landingImg from "./../../images/landingPage/landing.svg";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import SquareLoader from "react-spinners/SquareLoader";
 
 const landingDescriptionAnim = {
@@ -14,14 +14,12 @@ const landingDescriptionAnim = {
     opacity: 1,
     transition: {
       ease: "easeInOut",
-      duration: 1
+      duration: 1,
     },
   },
 };
 
-const Landing = ({loading, setLoading}) => {
-  
-
+const Landing = ({ loading, setLoading }) => {
   return (
     <div className="flex justify-center">
       <div className="container flex flex-col-reverse justify-center items-center  gap-8 lg:flex-row min-h-screen lg:justify-center lg:gap-8">
@@ -53,7 +51,15 @@ const Landing = ({loading, setLoading}) => {
             &darr;
           </p>
         </motion.div>
-        <SquareLoader size={150} color={"#ff6900"} loading={loading} />
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <SquareLoader size={150} color={"#ff6900"} loading={loading} />
+          </motion.div>
+        </AnimatePresence>
         <motion.img
           src={landingImg}
           alt="Landing"

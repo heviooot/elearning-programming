@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import wave from "./../../images/separators/separatorgray.svg";
 
 const Footer = ({scrollToAbout, scrollToContacts}) => {
@@ -19,7 +20,7 @@ const Footer = ({scrollToAbout, scrollToContacts}) => {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
             <div className="flex flex-col gap-5 p-5 items-center md:items-start">
               <h1 className="font-semibold">KONTEN</h1>
-              <h1>Materi</h1>
+              <Link to="/lessons">Materi</Link>
             </div>
             <div className="flex flex-col gap-5 p-5 items-center md:items-start">
               <h1 className="font-semibold">HELP</h1>
@@ -33,8 +34,9 @@ const Footer = ({scrollToAbout, scrollToContacts}) => {
             <div className="flex flex-col lg:col-span-2 gap-5 p-5 items-center md:items-end">
               <h1 className="font-semibold">MEDIA</h1>
               <a
-                href="https://google.com"
-                className="px-3 py-2 bg-orange rounded-2xl"
+                href="https://github.com/heviooot/elearning-programming"
+                className="flex items-center justify-center px-3 py-2 bg-orange rounded-2xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
+                target="__blank"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
