@@ -101,12 +101,12 @@ const Examples = () => {
   });
 
   return (
-    <>
-      <div className="relative bg-lessdark transform scale-y-105">
+    <div className="overflow-hidden">
+      <div className="relative bg-lessdark transform scale-y-105 overflow-visible">
         <img
           src={wave}
           alt=""
-          className=" w-screen h-auto max-h-72 p-0 m-0 bg-transparent box-border transform scale-y-110"
+          className=" w-screen h-auto max-h-72 p-0 m-0 bg-transparent box-border transform scale-y-110 transform scale-x-105"
         />
       </div>
       <div
@@ -156,7 +156,7 @@ const Examples = () => {
           </motion.h1>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
