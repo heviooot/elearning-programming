@@ -1,0 +1,73 @@
+{
+    "lessons": [
+        {
+            "topic": "Pengenalan",
+            "subtopic": [
+                {
+                    "title": "Materi 1",
+                    "explanation": "Explanation materi 1",
+                    "problem": "Problem materi 1",
+                    "solution": "Solution materi 1"
+                },
+                {
+                    "title": "Materi 2",
+                    "explanation": "Explanation materi 2",
+                    "problem": "Problem materi 2",
+                    "solution":"Solution materi 2"
+                },
+                {
+                    "title": "Materi 3",
+                    "explanation": "Explanation materi 3",
+                    "problem": "Problem materi 3",
+                    "solution":"Solution materi 3"
+                }
+            ]
+        },
+        {
+            "topic": "Chapter 1",
+            "subtopic": [
+                {
+                    "title": "Materi 1",
+                    "explanation": "Explanation materi 1",
+                    "problem": "Problem materi 1",
+                    "solution": "Solution materi 1"
+                },
+                {
+                    "title": "Materi 2",
+                    "explanation": "Explanation materi 2",
+                    "problem": "Problem materi 2",
+                    "solution":"Solution materi 2"
+                },
+                {
+                    "title": "Materi 3",
+                    "explanation": "Explanation materi 3",
+                    "problem": "Problem materi 3",
+                    "solution":"Solution materi 3"
+                }
+            ]
+        },
+        {
+            "topic": "Chapter 2",
+            "subtopic": [
+                {
+                    "title": "Materi 1",
+                    "explanation": "Explanation materi 1",
+                    "problem": "Problem materi 1",
+                    "solution": "Solution materi 1"
+                },
+                {
+                    "title": "Materi 2",
+                    "explanation": "Explanation materi 2",
+                    "problem": "Problem materi 2",
+                    "solution":"Solution materi 2"
+                },
+                {
+                    "title": "Materi 3",
+                    "explanation": "Explanation materi 3",
+                    "problem": "Problem materi 3",
+                    "solution":"Solution materi 3"
+                }
+            ]
+        }
+    ]
+}

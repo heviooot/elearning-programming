@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 const Lessons = () => {
     return (
         <Sidebar />
+        
     )
 }
 
