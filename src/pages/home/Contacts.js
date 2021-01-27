@@ -58,6 +58,18 @@ const Contacts = () => {
         google: "haroldgoogle",
       },
     },
+    {
+      id: 2,
+      name: "Jeremiah Maramis",
+      img: cat,
+      desc:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor odit et neque repellendus id eius doloremque ex recusandae fugiat sapiente!",
+      contacts: {
+        github: "jungithub",
+        linkedIn: "junlinkedin",
+        google: "jungoogle",
+      },
+    },
   ];
 
   const [headerRef, headerRefInView] = useInView({
@@ -67,7 +79,7 @@ const Contacts = () => {
 
   const [cardRef, cardRefInView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -300px 0px",
+    rootMargin: "0px 0px -150px 0px",
   });
 
   return (

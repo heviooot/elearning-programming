@@ -1,7 +1,7 @@
 import React from "react";
 import wave from "./../../images/separators/separatorgray.svg";
 
-const Footer = () => {
+const Footer = ({scrollToAbout, scrollToContacts}) => {
   return (
     <>
       <div className="relative bg-orange transform scale-y-105">
@@ -27,8 +27,8 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-5 p-5 items-center md:items-start">
               <h1 className="font-semibold">TIM</h1>
-              <h1 className="text-center md:text-left">Tentang Kami</h1>
-              <h1 className="text-center md:text-left">Kontak Kami</h1>
+              <h1 className="cursor-pointer text-center md:text-left" onClick={scrollToAbout}>Tentang Kami</h1>
+              <h1 className="cursor-pointer text-center md:text-left" onClick={scrollToContacts}>Kontak Kami</h1>
             </div>
             <div className="flex flex-col lg:col-span-2 gap-5 p-5 items-center md:items-end">
               <h1 className="font-semibold">MEDIA</h1>

@@ -93,11 +93,11 @@ const Examples = () => {
   });
   const [ref, InView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -300px 0px",
+    rootMargin: "0px 0px -150px 0px",
   });
   const [lastTextRef, lastTextRefInView] = useInView({
     triggerOnce: true,
-    rootMargin: "0px 0px -100px 0px",
+    rootMargin: "0px 0px -150px 0px",
   });
 
   return (

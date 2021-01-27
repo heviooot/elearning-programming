@@ -7,33 +7,33 @@ import { useInView } from "react-intersection-observer";
 
 const leftItemsVariants = {
   hidden: {
-    y: 200,
+    x: 200,
     opacity: 0,
     transition: {
-      type: "spring"
+      duration: 1
     },
   },
   visible: {
-    y:0,
+    x:0,
     opacity: 1,
     transition: {
-      type: "spring"
+      duration: 1
     },
   },
 };
 const rightItemsVariants = {
   hidden: {
-    y:200,
+    x: -200,
     opacity: 0,
     transition: {
-      type: "spring"
+      duration: 1
     },
   },
   visible: {
-    y:0,
+    x:0,
     opacity: 1,
     transition: {
-      type: "spring"
+      duration: 1
     },
   },
 };

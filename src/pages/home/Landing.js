@@ -6,14 +6,15 @@ import SquareLoader from "react-spinners/SquareLoader";
 
 const landingDescriptionAnim = {
   hidden: {
-    y: 200,
+    x: 200,
     opacity: 0,
   },
   visible: {
-    y: 0,
+    x: 0,
     opacity: 1,
     transition: {
-      type: "spring",
+      ease: "easeInOut",
+      duration: 1
     },
   },
 };

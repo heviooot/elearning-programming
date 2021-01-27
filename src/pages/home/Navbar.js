@@ -1,30 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({scrollToTop, scrollToAbout, scrollToContacts, scrollToExamples}) => {
   const [isOpen, setIsOpen] = useState(false); //state untuk mengetahui dropdown lagi kebuka atau nggak
 
   const toggle = () => {
     //function untuk mengubah isOpen menjadi true atau sebaliknya
     setIsOpen(!isOpen);
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const scrollToAbout = () => {
-    const about = document.getElementById("about");
-    window.scrollTo({ top: about.offsetTop-75, behavior: "smooth" });
-  };
-
-  const scrollToExamples = () => {
-    const example = document.getElementById("examples");
-    window.scrollTo({ top: example.offsetTop, behavior: "smooth" });
-  };
-  const scrollToContacts = () => {
-    const contacts = document.getElementById("contacts");
-    window.scrollTo({ top: contacts.offsetTop-75, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -131,17 +113,22 @@ const Navbar = () => {
         >
           Tentang Kami
         </div>
-        <div className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+        <div
+          className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
           onClick={scrollToExamples}
         >
           Contoh Materi
         </div>
-        <div className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
+        <div
+          className="p-4 transition duration-200 ease-in-out hover:shadow-md hover:bg-orange hover:text-white"
           onClick={scrollToContacts}
         >
           Kontak Kami
         </div>
-        <Link to="/lessons" className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark">
+        <Link
+          to="/lessons"
+          className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark"
+        >
           Materi
         </Link>
       </div>
