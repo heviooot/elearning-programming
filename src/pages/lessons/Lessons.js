@@ -1,10 +1,9 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 const Lessons = () => {
     return (
-        <div className="w-screen h-screen bg-gray-500">
-            
-        </div>
+        <Sidebar />
     )
 }
 
