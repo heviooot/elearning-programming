@@ -20,7 +20,7 @@ const Footer = ({scrollToAbout, scrollToContacts}) => {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5">
             <div className="flex flex-col gap-5 p-5 items-center md:items-start">
               <h1 className="font-semibold">KONTEN</h1>
-              <Link to="/lessons">Materi</Link>
+              <Link to="/materi">Materi</Link>
             </div>
             <div className="flex flex-col gap-5 p-5 items-center md:items-start">
               <h1 className="font-semibold">HELP</h1>

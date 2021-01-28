@@ -91,7 +91,7 @@ const Navbar = ({scrollToTop, scrollToAbout, scrollToContacts, scrollToExamples}
             </div>
             <Link
               className="relative text-white bg-orange mx-5 py-3 px-4 rounded-xl shadow-md transition duration-200 ease-in-out hover:bg-lessdark"
-              to="/lessons"
+              to="/materi"
             >
               Materi
             </Link>
@@ -126,7 +126,7 @@ const Navbar = ({scrollToTop, scrollToAbout, scrollToContacts, scrollToExamples}
           Kontak Kami
         </div>
         <Link
-          to="/lessons"
+          to="/materi"
           className="p-4 bg-orange text-white transition duration-200 ease-in-out hover:bg-lessdark"
         >
           Materi

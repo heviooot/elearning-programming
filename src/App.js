@@ -22,7 +22,7 @@ const App = () => {
           <Home setHideSidebar={setHideSidebar} />
           
         </Route>
-        <Route path="/lessons">
+        <Route path="/materi">
           <Lessons setHideSidebar={setHideSidebar} />
           
         </Route>
