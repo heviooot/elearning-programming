@@ -17,3 +17,5 @@ npx json-server --watch data/db.json --port 8000
 ### To see Mockup JSON
 
 http://localhost:8000/lessons
+
+in regex
