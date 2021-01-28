@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import About from "./About";
 import Contacts from "./Contacts";
 import Examples from "./Examples";
@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 
-const Home = () => {
+const Home = ({setHideSidebar}) => {
   const [loading, setLoading] = useState(true);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -25,6 +25,9 @@ const Home = () => {
     const contacts = document.getElementById("contacts");
     window.scrollTo({ top: contacts.offsetTop-75, behavior: "smooth" });
   };
+  useEffect(()=> {
+    setHideSidebar(true)
+  },[setHideSidebar])
   return (
     <>
       <Navbar scrollToTop={scrollToTop} scrollToAbout={scrollToAbout} scrollToExamples={scrollToExamples} scrollToContacts={scrollToContacts}/>

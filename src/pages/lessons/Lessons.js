@@ -1,11 +1,12 @@
-import React from 'react'
-import Sidebar from './Sidebar'
-import useFetch from "./../../hooks/useFetch"
+import React, { useEffect } from 'react'
 
-const Lessons = () => {
-    const { data, isLoading, error } = useFetch("http://localhost:8000/lessons");
+
+const Lessons = ({setHideSidebar}) => {
+    useEffect(() => {
+      setHideSidebar(false)
+    },[setHideSidebar])
     return (
-        <Sidebar lessons={data} isLoading={isLoading} error={error} />
+        <div></div>
         
     )
 }
