@@ -1,15 +1,19 @@
 # E-learning programming
 
-### HAI GAES REI DISINI
+### Installation
 
-### HAI JOS DISINI DISINI
+git clone https://github.com/heviooot/elearning-programming.git
 
-### HAI KHRIS DISINI
+npm install
 
-test webhooks part2
-commit di laptop harold
+npm install -g json-server
 
-COPY TUTORIAL MANA INI?
+npm start
 
-Rei-testNewBranch
-harold-testNewBranch so di master
+### Starting JSON-Server Mockup
+
+npx json-server --watch data/db.json --port 8000
+
+### To see Mockup JSON
+
+http://localhost:8000/lessons
