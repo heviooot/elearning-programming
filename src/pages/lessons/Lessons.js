@@ -53,7 +53,7 @@ const Test = () => {
         ini editor
       </div>
 
-      <div className="w-48 font-mono text-center rounded-xl mx-auto pb-3 pt-2 px-2 mt-4 mb-6 block bg-orange">
+      <div className="w-48 font-mono text-center rounded-xl mx-auto pb-3 pt-2 px-2 mt-4 mb-6 block bg-orange text-white">
         compile
       </div>
 
