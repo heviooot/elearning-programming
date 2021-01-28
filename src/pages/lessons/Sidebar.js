@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 const Sidebar = ({ lessons, isLoading, error }) => {
   return (
-    <div className="fixed flex flex-col w-64 h-screen bg-lessdark shadow-md font-roboto z-10 p-4 text-white overflow-y-auto">
+    // <div className="fixed flex flex-col w-64 h-screen bg-lessdark shadow-md font-roboto z-10 p-4 text-white overflow-y-auto">
+    <div className="w-64 h-screen bg-lessdark shadow-md font-roboto z-10 p-4 text-white">
       <Link
         to="/"
         className="w-48 font-mono text-3xl text-center rounded-xl mx-auto pb-3 pt-2 px-2 mt-4 mb-6 block bg-orange shadow-lg"
