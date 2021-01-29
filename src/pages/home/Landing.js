@@ -41,7 +41,7 @@ const Landing = ({ loading, setLoading }) => {
           </p>
           <Link
             className="text-center text-white bg-orange py-3 px-4 rounded-xl shadow-lg transition duration-200 ease-in-out hover:bg-lessdark lg:w-36"
-            to="/materi"
+            to="/lessons"
           >
             Pergi ke Materi
           </Link>

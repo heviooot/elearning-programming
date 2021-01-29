@@ -22,12 +22,13 @@ const Sidebar = ({ lessons, isLoading, error, hidden }) => {
           <div key={lesson.id}>
             <h1 className="text-lg font-medium my-2">{lesson.topic}</h1>
             {lesson.subtopic.map((sub, index) => (
-              <h1
+              <Link
+                to={`/lessons/${lesson.topic}/${sub.title}`}
                 key={index}
-                className="py-2 px-4 text-sm rounded-lg transition duration-200 ease-in-out hover:bg-orange hover:shadow-lg"
+                className="py-2 px-4 text-sm rounded-lg transition block duration-200 ease-in-out hover:bg-orange hover:shadow-lg"
               >
                 {sub.title}
-              </h1>
+              </Link>
             ))}
           </div>
         ))}

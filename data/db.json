@@ -5,22 +5,22 @@
             "topic": "Pengenalan",
             "subtopic": [
                 {
-                    "title": "Materi 1",
-                    "explanation": "Explanation materi 1",
-                    "problem": "Problem materi 1",
-                    "solution": "Solution materi 1"
+                    "title": "Pengenalan Materi 1",
+                    "explanation": "Explanation Pengenalan materi 1",
+                    "problem": "Problem Pengenalan materi 1",
+                    "solution": "Solution Pengenalan materi 1"
                 },
                 {
-                    "title": "Materi 2",
-                    "explanation": "Explanation materi 2",
-                    "problem": "Problem materi 2",
-                    "solution":"Solution materi 2"
+                    "title": "Pengenalan Materi 2",
+                    "explanation": "Explanation Pengenalan materi 2",
+                    "problem": "Problem Pengenalan materi 2",
+                    "solution": "Solution Pengenalan materi 2"
                 },
                 {
-                    "title": "Materi 3",
-                    "explanation": "Explanation materi 3",
-                    "problem": "Problem materi 3",
-                    "solution":"Solution materi 3"
+                    "title": "Pengenalan Materi 3",
+                    "explanation": "Explanation Pengenalan materi 3",
+                    "problem": "Problem Pengenalan materi 3",
+                    "solution": "Solution Pengenalan materi 3"
                 }
             ]
         },
@@ -29,22 +29,22 @@
             "topic": "Chapter 1",
             "subtopic": [
                 {
-                    "title": "Materi 1",
-                    "explanation": "Explanation materi 1",
-                    "problem": "Problem materi 1",
-                    "solution": "Solution materi 1"
+                    "title": "Chapter 1 Materi 1",
+                    "explanation": "Explanation Chapter 1 materi 1",
+                    "problem": "Problem Chapter 1 materi 1",
+                    "solution": "Solution Chapter 1 materi 1"
                 },
                 {
-                    "title": "Materi 2",
-                    "explanation": "Explanation materi 2",
-                    "problem": "Problem materi 2",
-                    "solution":"Solution materi 2"
+                    "title": "Chapter 1 Materi 2",
+                    "explanation": "Explanation Chapter 1 materi 2",
+                    "problem": "Problem Chapter 1 materi 2",
+                    "solution": "Solution Chapter 1 materi 2"
                 },
                 {
-                    "title": "Materi 3",
-                    "explanation": "Explanation materi 3",
-                    "problem": "Problem materi 3",
-                    "solution":"Solution materi 3"
+                    "title": "Chapter 1 Materi 3",
+                    "explanation": "Explanation Chapter 1 materi 3",
+                    "problem": "Problem Chapter 1 materi 3",
+                    "solution": "Solution Chapter 1 materi 3"
                 }
             ]
         },
@@ -53,22 +53,22 @@
             "topic": "Chapter 2",
             "subtopic": [
                 {
-                    "title": "Materi 1",
-                    "explanation": "Explanation materi 1",
-                    "problem": "Problem materi 1",
-                    "solution": "Solution materi 1"
+                    "title": "Chapter 2 Materi 1",
+                    "explanation": "Explanation Chapter 2 materi 1",
+                    "problem": "Problem Chapter 2 materi 1",
+                    "solution": "Solution Chapter 2 materi 1"
                 },
                 {
-                    "title": "Materi 2",
-                    "explanation": "Explanation materi 2",
-                    "problem": "Problem materi 2",
-                    "solution":"Solution materi 2"
+                    "title": "Chapter 2 Materi 2",
+                    "explanation": "Explanation Chapter 2 materi 2",
+                    "problem": "Problem Chapter 2 materi 2",
+                    "solution": "Solution Chapter 2 materi 2"
                 },
                 {
-                    "title": "Materi 3",
-                    "explanation": "Explanation materi 3",
-                    "problem": "Problem materi 3",
-                    "solution":"Solution materi 3"
+                    "title": "Chapter 2 Materi 3",
+                    "explanation": "Explanation Chapter 2 materi 3",
+                    "problem": "Problem Chapter 2 materi 3",
+                    "solution": "Solution Chapter 2 materi 3"
                 }
             ]
         }

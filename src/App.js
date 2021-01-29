@@ -4,6 +4,7 @@ import Lessons from "./pages/lessons/Lessons";
 import Home from "./pages/home/Home";
 import useFetch from "./hooks/useFetch";
 import Sidebar from "./pages/lessons/Sidebar";
+import LessonDetails from "./pages/lessons/LessonDetails";
 
 const App = () => {
   const [hideSidebar, setHideSidebar] = useState(true);
@@ -20,11 +21,12 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Home setHideSidebar={setHideSidebar} />
-          
         </Route>
-        <Route path="/materi">
+        <Route exact path="/lessons">
           <Lessons setHideSidebar={setHideSidebar} />
-          
+        </Route>
+        <Route path="/lessons/:topics/:subtopics">
+          <LessonDetails setHideSidebar={setHideSidebar}/>
         </Route>
       </Switch>
     </div>

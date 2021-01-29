@@ -10,7 +10,7 @@ const useFetch = (url) => {
     fetch(url, { signal: abortCont.signal })
       .then((res) => {
         if (!res.ok) {
-          throw Error("Could not fetch data");
+          throw Error("Could not fetch data. Try to refresh page :( ");
         }
         return res.json();
       })
@@ -24,7 +24,7 @@ const useFetch = (url) => {
           console.log("Fetch Aborted");
         } else {
           setIsLoading(false);
-          setError(err.message);
+          setError(err.message + ". Try to refresh page :(");
         }
       });
 
