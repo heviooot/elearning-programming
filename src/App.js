@@ -8,14 +8,16 @@ import LessonDetails from "./pages/lessons/LessonDetails";
 
 const App = () => {
   const [hideSidebar, setHideSidebar] = useState(true);
-  const { data, isLoading, error } = useFetch("http://localhost:8000/lessons");
+  const { data, isLoading, error } = useFetch(
+    "http://localhost:8000/lessons"
+  );
   return (
     <div className="font-roboto">
       <Sidebar
+        hidden={hideSidebar}
         lessons={data}
         isLoading={isLoading}
         error={error}
-        hidden={hideSidebar}
       />
 
       <Switch>
@@ -26,7 +28,11 @@ const App = () => {
           <Lessons setHideSidebar={setHideSidebar} />
         </Route>
         <Route path="/lessons/:topics/:subtopics">
-          <LessonDetails setHideSidebar={setHideSidebar}/>
+          <LessonDetails setHideSidebar={setHideSidebar} 
+            lessons={data}
+            isLoading={isLoading}
+            error={error}
+          />
         </Route>
       </Switch>
     </div>

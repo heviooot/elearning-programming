@@ -1,26 +1,48 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
 
-const LessonDetails = ({ setHideSidebar }) => {
-  const [lessonDetails, setLessonDetails] = useState([]);
+const LessonDetails = ({ setHideSidebar, lessons, isLoading, error }) => {
   const { topics, subtopics } = useParams();
-  const { data, isLoading, error } = useFetch(
-    `http://localhost:8000/lessons/?topic=${topics}`
-  );
-
+  const [lessonDetails, setLessonDetails] = useState({
+    chapterTitle: "",
+    subChapterTitle: "",
+    explanation: "",
+    problem: "",
+    solution: "",
+  });
   useEffect(() => {
     setHideSidebar(false);
-    if (data !== null) {
-      setLessonDetails(data[0]);
+    if (lessons !== null) {
+      const filteredLessons = lessons.filter(
+        (lesson) => lesson.topic === `${topics}`
+      );
+      filteredLessons.forEach((filteredLesson) => {
+        if (filteredLesson.topic === `${topics}`) {
+          var chapterTitle = filteredLesson.topic;
+        }
+        filteredLesson.subtopic.forEach((subtopic) => {
+          if (subtopic.title === `${subtopics}`) {
+            setLessonDetails({
+              chapterTitle: chapterTitle,
+              subChapterTitle: subtopic.title,
+              explanation: subtopic.explanation,
+              problem: subtopic.problem,
+              solution: subtopic.solution,
+            });
+          }
+        });
+      });
     }
-  }, [setHideSidebar, data]);
+  }, [setHideSidebar, lessons, topics, subtopics]);
 
   return (
     <div className="pl-64">
-      {error ?? <div>{error}</div>}
-      {isLoading ?? <div>loading...</div>}
-      {lessonDetails.topic ?? <div>{lessonDetails.topic}</div>}
+      {isLoading ?? <h1 className="pl-64">Loading...</h1>}
+      <h1>Topic : {lessonDetails.chapterTitle}</h1>
+      <h1>subtopic : {lessonDetails.subChapterTitle}</h1>
+      <h1>explanation : {lessonDetails.explanation}</h1>
+      <h1>problem : {lessonDetails.problem}</h1>
+      <h1>Solution : {lessonDetails.solution}</h1>
     </div>
   );
 };

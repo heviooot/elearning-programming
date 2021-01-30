@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Sidebar = ({ lessons, isLoading, error, hidden }) => {
+const Sidebar = ({ hidden, lessons, error, isLoading }) => {
   return (
     <div
       className={
